@@ -26,8 +26,8 @@ model = keras.Sequential([
     keras.layers.Dense(10, activation=tf.nn.softmax)
 ])
 
-model.compile(optimizer=tf.train.AdamOptimizer(),
-              loss='sparse_categorical_crossentropy',
+model.compile(optimizer = tf.keras.optimizers.Adam(),
+              loss = 'sparse_categorical_crossentropy',
               metrics=['accuracy'])
 
 model.fit(train_images, train_labels, epochs=5)
